@@ -28,8 +28,8 @@ export default function StarRating({
   const [tempRating, setTempRating] = useState(0);
 
   function handleRating(rating) {
-    setRating(rating);
-    onSetRating(rating);
+    if (setRating) setRating(rating);
+    if (onSetRating) onSetRating(rating);
   }
 
   const textStyle = {
